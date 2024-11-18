@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="description" content="Exercise Frontend Mentor, Todo app">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap" rel="stylesheet">
+      <link href="styles.css" rel="stylesheet" type="text/css">
+      <title>Frontend Mentor | Todo app</title>
+    </head>
+    <body>
+
+      <main class="main-container text">
+
+        <header class="header-container">
+          <h1 class="title text-bold">todo</h1>
+          <button class="button button-theme-mode"><img class="image-theme-mode" src="./images/icon-moon.svg" alt="moon"></button>
+        </header>
+
+        <label class="label-todo" for="myTodo">
+          <span class="check-off"></span>
+          <input class="input-todo text" id="myTodo" type="text" placeholder="Create a new todo...">
+        </label>
+
+        <div class="todo-container">
+          <ul class="list" ondragover='dragOver(event)'>
+          </ul>
+
+          <p class="left">
+            <span><span class="number-items">0</span> items left</span>
+            <button class="button" onclick="sortCompletedAll()">Clear Completed</button>
+          </p>
+
+          <div class="left-desktop">
+            <span><span class="number-items">0</span> items left</span>
+            <div class="button-container text-bold">
+              <button class="button button-all" onclick="sortAll(this)">All</button>
+              <button class="button button-active" onclick="sortActive(this)">Active</button>
+              <button class="button button-completed" onclick="sortCompleted(this)">Completed</button>
+            </div>
+            <button class="button" onclick="sortCompletedAll()">Clear Completed</button>          
+          </div>
+
+        </div>
+                
+        <div class="bottom-container text-bold">
+          <button class="button button-all" onclick="sortAll(this)">All</button>
+          <button class="button button-active" onclick="sortActive(this)">Active</button>
+          <button class="button button-completed" onclick="sortCompleted(this)">Completed</button>
+        </div>
+
+        <p class="drapDrop text">Drag and drop to reorder list</p>
+
+      </main>
+
+    <script src="./script.js"></script>
+
+    </body>
+</html>
